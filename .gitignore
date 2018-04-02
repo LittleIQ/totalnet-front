@@ -1,0 +1,10 @@
+*.txt
+
+/js/
+/css/
+
+index.js
+readText.js
+
+!/css/user.ss
+!/js/user.js
