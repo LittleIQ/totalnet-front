@@ -1,3 +1,9 @@
+/*
+ * @Author: milkIQ 
+ * @Date: 2018-04-04 00:12:20 
+ * @Last Modified by: milkIQ
+ * @Last Modified time: 2018-04-04 00:12:48
+ */
 
 function loginHidden() {
   $('#title').fadeOut('fast', function () {
