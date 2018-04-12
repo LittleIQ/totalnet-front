@@ -2,6 +2,7 @@
 
 /js/
 /css/
+/.vscode/
 
 index.js
 readText.js
