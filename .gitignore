@@ -1,6 +1,7 @@
 *.txt
 
 /.vscode/
+/localServer/
 
 index.js
 readText.js
