@@ -1,7 +1,5 @@
 *.txt
 
-/js/
-/css/
 /.vscode/
 
 index.js
