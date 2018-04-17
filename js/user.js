@@ -2,7 +2,7 @@
  * @Author: milkIQ 
  * @Date: 2018-04-04 00:12:20 
  * @Last Modified by: milkIQ
- * @Last Modified time: 2018-04-04 00:12:48
+ * @Last Modified time: 2018-04-17 15:38:11
  */
 
 function loginHidden() {
@@ -48,15 +48,15 @@ function eye() {
 }
 
 function success(data) {
-  // data = $.parseJSON(data);
-  if (data.status == 0) {
+  data = $.parseJSON(data);
+  if (data.status) {
     $('#inputRUsername').attr('data-content', '用户名可用')
     $('#inputRUsername').popover('show');
     setTimeout(function () {
       $('#inputRUsername').popover('hide');
     }, 1000);
     return true;
-  } else if (data.status == 1) {
+  } else {
     $('#inputRUsername').attr('data-content', '用户名重复，不能使用');
     $('#inputRUsername').popover('show');
     return false;
@@ -156,8 +156,8 @@ function registerCheck() {
   window.registerStatus.passwordRes = passwordResRegexp();
   var username = $('#inputRUsername').val();
   var status = findUsername(
-    'http://localhost:3000', {
-      name: username
+    '/fts/json/judge.action', {
+      "ftsUsers.userName": username
     },
     success
   );
@@ -196,8 +196,8 @@ $(function () {
   $('#inputRUsername').blur(function () {
     var username = $('#inputRUsername').val();
     findUsername(
-      'http://localhost:3000', {
-        name: username
+      '/fts/json/judge.action', {
+        "ftsUsers.userName": username
       },
       success
     );

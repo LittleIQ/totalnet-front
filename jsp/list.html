@@ -150,7 +150,7 @@
 
             var dataSource = ['闪灵', '神偷奶爸', '头号玩家', '爆裂无声', '闪电侠', '一个头两个大', '玩具总动员'];
             $.post({
-                url: 'http://localhost:8080/',
+                url: '/fts/json/keywords.action',
                 data: {},
                 success: function (result) {
                     dataSource = result;
