@@ -2,7 +2,7 @@
  * @Author: milkIQ 
  * @Date: 2018-04-04 00:12:20 
  * @Last Modified by: milkIQ
- * @Last Modified time: 2018-04-17 15:55:37
+ * @Last Modified time: 2018-04-17 18:04:11
  */
 
 function loginHidden() {
@@ -138,7 +138,7 @@ function passwordResRegexp() {
 function loginCheck() {
   var name = $('#inputUsername');
   var password = $('#inputPassword');
-  var form = $('loginForm');
+  var form = $('#loginForm');
   if (name.val().length == 0) {
     name.attr('data-content', '用户名未填写');
     name.popover('show');
@@ -170,7 +170,7 @@ function registerCheck() {
   if (!status) {
     alert('输入有误，请检查后提交');
   } else {
-    $('registerForm').submit();
+    $('#registerForm').submit();
   }
 }
 
